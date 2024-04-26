@@ -1,0 +1,126 @@
+venv/
+my_test_images/
+image-quality-assessment-master_stable
+clip_functions/__pycache__
+
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Translations
+image-quality-assessment-master_MINE/*.mo
+image-quality-assessment-master_MINE/*.pot
+
+# Flask stuff:
+image-quality-assessment-master_MINE/instance/
+image-quality-assessment-master_MINE/.webassets-cache
+
+# Scrapy stuff:
+image-quality-assessment-master_MINE/.scrapy
+
+# Sphinx documentation
+image-quality-assessment-master_MINE/docs/_build/
+
+# PyBuilder
+image-quality-assessment-master_MINE/target/
+
+# Jupyter Notebook
+image-quality-assessment-master_MINE/.ipynb_checkpoints
+
+# pyenv
+image-quality-assessment-master_MINE/.python-version
+
+# celery beat schedule file
+image-quality-assessment-master_MINE/celerybeat-schedule.*
+
+# SageMath parsed files
+image-quality-assessment-master_MINE/*.sage.py
+
+# Environments
+image-quality-assessment-master_MINE/.env
+image-quality-assessment-master_MINE/.venv
+image-quality-assessment-master_MINE/env/
+image-quality-assessment-master_MINE/venv/
+image-quality-assessment-master_MINE/ENV/
+image-quality-assessment-master_MINE/env.bak/
+image-quality-assessment-master_MINE/venv.bak/
+
+# Spyder project settings
+image-quality-assessment-master_MINE/.spyderproject
+image-quality-assessment-master_MINE/.spyproject
+
+# Rope project settings
+image-quality-assessment-master_MINE/.ropeproject
+
+# mkdocs documentation
+image-quality-assessment-master_MINE//site
+
+# mypy
+image-quality-assessment-master_MINE/.mypy_cache/
+
+
+# End of https://www.gitignore.io/api/python
+
+# Custom
+image-quality-assessment-master_MINE/.DS_Store
+image-quality-assessment-master_MINE/.idea/
+image-quality-assessment-master_MINE/.pyre
+image-quality-assessment-master_MINE/train_jobs
+image-quality-assessment-master_MINE/_medium
+image-quality-assessment-master_MINE/_readme/graphs.ipynb
+image-quality-assessment-master_MINE/mkdocs/docs/_readme/
+image-quality-assessment-master_MINE/mkdocs/docs/evaluater/
+image-quality-assessment-master_MINE/mkdocs/docs/handlers/
+image-quality-assessment-master_MINE/mkdocs/docs/tests/
+image-quality-assessment-master_MINE/mkdocs/docs/trainer/
+image-quality-assessment-master_MINE/mkdocs/docs/utils/
+image-quality-assessment-master_MINE/mkdocs/docs/index.md
+image-quality-assessment-master_MINE/mkdocs/docs/CONTRIBUTING.md
+image-quality-assessment-master_MINE/mkdocs/docs/LICENSE.md
+image-quality-assessment-master_MINE/docs
