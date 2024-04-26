@@ -1,6 +1,5 @@
 venv/
 my_test_images/
-image-quality-assessment-master_stable
 clip_functions/__pycache__
 
 
@@ -53,6 +52,81 @@ coverage.xml
 *.cover
 .hypothesis/
 
+# ******* image-quality-assessment-master_stable/ ******* 
+# Translations
+image-quality-assessment-master_stable/*.mo
+image-quality-assessment-master_stable/*.pot
+
+# Flask stuff:
+image-quality-assessment-master_stable/instance/
+image-quality-assessment-master_stable/.webassets-cache
+
+# Scrapy stuff:
+image-quality-assessment-master_stable/.scrapy
+
+# Sphinx documentation
+image-quality-assessment-master_stable/docs/_build/
+
+# PyBuilder
+image-quality-assessment-master_stable/target/
+
+# Jupyter Notebook
+image-quality-assessment-master_stable/.ipynb_checkpoints
+
+# pyenv
+image-quality-assessment-master_stable/.python-version
+
+# celery beat schedule file
+image-quality-assessment-master_stable/celerybeat-schedule.*
+
+# SageMath parsed files
+image-quality-assessment-master_stable/*.sage.py
+
+# Environments
+image-quality-assessment-master_stable/.env
+image-quality-assessment-master_stable/.venv
+image-quality-assessment-master_stable/env/
+image-quality-assessment-master_stable/venv/
+image-quality-assessment-master_stable/ENV/
+image-quality-assessment-master_stable/env.bak/
+image-quality-assessment-master_stable/venv.bak/
+
+# Spyder project settings
+image-quality-assessment-master_stable/.spyderproject
+image-quality-assessment-master_stable/.spyproject
+
+# Rope project settings
+image-quality-assessment-master_stable/.ropeproject
+
+# mkdocs documentation
+image-quality-assessment-master_stable/site
+
+# mypy
+image-quality-assessment-master_stable/.mypy_cache/
+
+
+# End of https://www.gitignore.io/api/python
+
+# Custom
+image-quality-assessment-master_stable/.DS_Store
+image-quality-assessment-master_stable/.idea/
+image-quality-assessment-master_stable/.pyre
+image-quality-assessment-master_stable/train_jobs
+image-quality-assessment-master_stable/_medium
+image-quality-assessment-master_stable/_readme/graphs.ipynb
+image-quality-assessment-master_stable/mkdocs/docs/_readme/
+image-quality-assessment-master_stable/mkdocs/docs/evaluater/
+image-quality-assessment-master_stable/mkdocs/docs/handlers/
+image-quality-assessment-master_stable/mkdocs/docs/tests/
+image-quality-assessment-master_stable/mkdocs/docs/trainer/
+image-quality-assessment-master_stable/mkdocs/docs/utils/
+image-quality-assessment-master_stable/mkdocs/docs/index.md
+image-quality-assessment-master_stable/mkdocs/docs/CONTRIBUTING.md
+image-quality-assessment-master_stable/mkdocs/docs/LICENSE.md
+image-quality-assessment-master_stable/docs
+
+
+# ******* image-quality-assessment-master_MINE/ ******* 
 # Translations
 image-quality-assessment-master_MINE/*.mo
 image-quality-assessment-master_MINE/*.pot
