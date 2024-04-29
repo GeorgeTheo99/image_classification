@@ -1,4 +1,0 @@
-nose
-scikit-learn
-pillow==5.0.*
-tensorflow

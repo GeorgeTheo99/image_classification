@@ -1,6 +1,9 @@
 venv/
 my_test_images/
 clip_functions/__pycache__
+image-quality-assessment-master_MINE/src/tests/test_images/DJI_0421.jpg
+image-quality-assessment-master_MINE/training_images/
+user_images/
 
 
 ### Python ###
