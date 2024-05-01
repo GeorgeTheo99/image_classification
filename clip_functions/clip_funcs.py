@@ -14,7 +14,7 @@ class ImageClassifier:
                 'Wildlife photography': ['Animal Photography', 'Plant Photography', 'Insect Photography'],
             },
             'Cityscape photography': {
-                'General': ['Street photography', 'Structural photography', 'Night cityscape photography'],
+                'General': ['Street photography', 'Architecture photography', 'Night cityscape photography'],
                 'Architecture photography': ['Modern Architecture', 'Historical Architecture', 'Interior Architecture'],
             },
             'Photographs of people': {
@@ -104,7 +104,7 @@ class ImageClassifier:
             level2_labels = self.category_map[level1].get('General', [])
             if level2_labels:
                 level2_sorted = self.classify_sorted(im, level2_labels)
-                level2_categories = [label for label, prob in level2_sorted if prob >= level2_sorted[0][1] - 0.05]
+                level2_categories = [label for label, prob in level2_sorted if prob >= level2_sorted[0][1] - 0.1]
                 category_dict.setdefault('level_2', set()).update(level2_categories)
 
                 # Process each Level 2 category

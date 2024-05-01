@@ -37,9 +37,9 @@ CMD ["streamlit", "run", "front_end.py", "--server.enableCORS", "false", "--brow
 # docker run -p 8501:8501 gcr.io/concise-result-418721/streamlit-app
 # docker run -p 8501:8501 -v /var/run/docker.sock:/var/run/docker.sock gcr.io/concise-result-418721/streamlit-app 
 
-# PUBLISH TO SERVICE
+# PUBLISH TO SERVICE #NOT IN USE
 # build the container
 # gcloud builds submit --tag gcr.io/concise-result-418721/streamlit-app
 
-# deploy the container
+# deploy the container #NOT IN USE
 # gcloud run deploy --image gcr.io/concise-result-418721/streamlit-app --platform managed --allow-unauthenticated

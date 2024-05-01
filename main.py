@@ -40,7 +40,7 @@ def run_nima(image_path, classify_type='aesthetic',clip_data=False):
 
 def get_all_stats(photo_path = None):
     if not photo_path:
-        photo_path = os.path.join(os.getcwd(), "my_test_images", "DJI_0421.jpg")
+        photo_path = os.path.join(os.getcwd(), "my_test_images", "drone_shot.jpg")
     image_stats = {
         photo_path: {
             'nima_technical_result': None,
@@ -66,6 +66,3 @@ def get_all_stats(photo_path = None):
 
     print(image_stats)
     return image_stats
-
-if __name__=='__main__':
-    get_all_stats()

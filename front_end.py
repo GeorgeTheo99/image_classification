@@ -3,10 +3,11 @@ from main import get_all_stats
 from PIL import Image
 import os
 import pandas as pd
+import re
 
 i = 1
 def save_image(uploaded_file, filename=None):
-    # Ensure the folder exists
+    # make sure the folder exists
     path = "./user_images"
     if not filename:
         file_path = os.path.join(path, uploaded_file.name)
@@ -18,7 +19,7 @@ def save_image(uploaded_file, filename=None):
     return file_path
 
 def display_results(results):
-    # Automatically extract the single entry from results
+    # extract dict item
     photo_path, data = next(iter(results.items()))
     st.divider()
 
@@ -39,7 +40,7 @@ def display_results(results):
     cols[2].metric("Subpar Picture", f"{data['clip_aesthetic_result']['subpar picture']:.2f}%")
 
     st.subheader('CLIP Classifications', help="Photo content as defined by CLIP with hierarchical categorization")
-    # Create DataFrame to display classifications
+    # df to display classifications
     classification_data = []
     for level, categories in data['clip_classification'].items():
         classification_data.append({
@@ -54,7 +55,7 @@ def display_results(results):
 def main():
     global i
     st.header('Image Analysis and Classification')
-    st.markdown('_with [NIMA](https://idealo.github.io/image-quality-assessment/) and [CLIP](https://openai.com/research/clip)_')
+    st.markdown('_with [NIMA](https://arxiv.org/pdf/1709.05424.pdf) and [CLIP](https://openai.com/research/clip)_')
     options = ['Sample Photos','Upload Photo']
     try:
         image_source = st.radio('Image source:', options, horizontal=True, key = i)
@@ -67,18 +68,27 @@ def main():
             uploaded_file = st.file_uploader("Upload a JPEG image:", type=['jpg'], key=i)
             i+=1
             if uploaded_file is not None:
-                filename = uploaded_file.name
-                base_name, ext = os.path.splitext(uploaded_file.name)
+                # filename = uploaded_file.name
+                # base_name, ext = os.path.splitext(uploaded_file.name)
+                # ext = ext.lower()
+                # if ext in ['.jpg', '.jpeg']:
+                #     ext = '.jpg'
+                # filename = f"{base_name}{ext}"
+                original_filename = uploaded_file.name
+                base_name, ext = os.path.splitext(original_filename)
+                sanitized_base_name = re.sub(r'[^\w\-]', '', base_name)
+                # Lowercase and correct the extension if necessary
                 ext = ext.lower()
                 if ext in ['.jpg', '.jpeg']:
                     ext = '.jpg'
-                filename = f"{base_name}{ext}"
+                # Combine the sanitized base name with the corrected extension
+                filename = f"{sanitized_base_name}{ext}"
 
                 image = Image.open(uploaded_file)
                 st.image(image, caption='Uploaded Image', use_column_width=True)
                 saved_file_path = save_image(uploaded_file, filename)
 
-                # Button to trigger model execution
+                # button to trigger model execution
                 if st.button('Run Models'):
                     with st.spinner('Running models...'):
                         results = get_all_stats(saved_file_path)

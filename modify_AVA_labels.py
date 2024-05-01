@@ -40,8 +40,6 @@ def process_images_and_adjust_labels(json_filepath, image_dir, output_filepath):
     processed_data = []
     x = 1
     for entry in data:
-        if x > 20:
-            break
         try:
             image_path = f"{image_dir}/{entry['image_id']}.jpg"
             clip_ratings = classifier.get_photo_quality(image_path)
@@ -49,7 +47,6 @@ def process_images_and_adjust_labels(json_filepath, image_dir, output_filepath):
             processed_data.append(updated_entry)
         except:
             continue
-        x+=1
 
     with open(output_filepath, 'w') as file:
         json.dump(processed_data, file, indent=4)
@@ -57,5 +54,5 @@ def process_images_and_adjust_labels(json_filepath, image_dir, output_filepath):
 json_filepath = '/home/georgetheodosopoulos/CVII_project/image-quality-assessment-master_MINE/data/AVA/ava_labels_train.json'
 image_dir = '/home/georgetheodosopoulos/CVII_project/image-quality-assessment-master_MINE/training_images/AVA_images/images'
 output_filepath = '/home/georgetheodosopoulos/CVII_project/image-quality-assessment-master_MINE/data/AVA/ava_labels_train_CLIP.json'
-output_filepath = '/home/georgetheodosopoulos/CVII_project/image-quality-assessment-master_MINE/data/AVA/ava_labels_train_CLIP_TEST.json'
+
 process_images_and_adjust_labels(json_filepath, image_dir, output_filepath)
